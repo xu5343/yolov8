@@ -2,8 +2,41 @@
 
 Exports detection/segment model with optimization for RKNN, please refer here [RKOPT_README.md](RKOPT_README.md). Optimization for exporting model does not affect the training stage
 
-关于如何导出适配 RKNPU 分割/检测 模型，请参考 [RKOPT_README.zh-CN.md](RKOPT_README.zh-CN.md)，该优化只在导出模型时生效，训练代码按照原仓库的指引即可。
+关于如何导出适配 RKNPU 分割/检测 模型，请参考 [RKOPT_README.zh-CN.md](RKOPT_README.zh-CN.md)，该优化只在导出模型时生效，训练代码按照原仓库的指引即可。  
 
+## Yolov8（CPU）安装流程  
+conda安装虚拟环境python版本不要过高
+
+在yolov8文件夹中进入虚拟环境中
+```bash
+wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
+bash Anaconda3-2024.02-1-Linux-x86_64.sh
+conda info //详情
+conda list //软件列表
+conda init //激活
+source ~/.bashrc
+conda create -n y8 python=3.8 //建立yolo8环境,简称y8
+conda activate y8 //进入y8环境，(退出环境:conda deactivate)
+```
+
+虚拟环境中安装：
+
+安装pytorch：
+```bash
+conda install pytorch torchvision torchaudio cpuonly
+pip3 install torch torchvision torchaudio
+git clone git clone https://github.com/xu5343/yolov8.git
+cd yolov8
+pip install -r requirements.txt
+pip install ultralytics
+pip install yolo
+python setup.py install
+pip install msvc-runtime
+```
+测试：
+```bash
+yolo predict model=yolov8s.pt source=yolo/assets/zidane.jpg save=true show=True
+```
 ---
 
 <div align="center">
