@@ -23,7 +23,7 @@ conda activate y8 //进入y8环境，(退出环境:conda deactivate)
 
 安装pytorch：
 ```bash
-conda install pytorch torchvision torchaudio cpuonly
+conda install pytorch torchvision torchaudio cpuonly git
 pip3 install torch torchvision torchaudio
 git clone git clone https://github.com/xu5343/yolov8.git
 cd yolov8
@@ -31,6 +31,7 @@ pip install -r requirements.txt
 pip install ultralytics
 pip install yolo
 python setup.py install
+pip install chardet charset_normalizer
 pip install msvc-runtime
 ```
 测试：
