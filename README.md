@@ -10,7 +10,7 @@ conda安装虚拟环境python版本不要过高
 在yolov8文件夹中进入虚拟环境中
 ```bash
 wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
-bash Anaconda3-2024.02-1-Linux-x86_64.sh  -b -p /opt/anaconda3
+bash Anaconda3-2024.02-1-Linux-x86_64.sh -b -p /opt/anaconda3
 conda info //详情
 conda list //软件列表
 conda init //激活
