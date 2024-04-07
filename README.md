@@ -10,11 +10,12 @@ conda安装虚拟环境python版本不要过高
 在yolov8文件夹中进入虚拟环境中
 ```bash
 wget https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
-bash Anaconda3-2024.02-1-Linux-x86_64.sh
+bash Anaconda3-2024.02-1-Linux-x86_64.sh  -b -p /opt/anaconda3
 conda info //详情
 conda list //软件列表
 conda init //激活
 source ~/.bashrc
+source /opt/anaconda3/bin/activate y8  # 激活conda1中的y8环境
 conda create -n y8 python=3.8 //建立yolo8环境,简称y8
 conda activate y8 //进入y8环境，(退出环境:conda deactivate)
 ```
